@@ -25,9 +25,14 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "@angular/material/prebuilt-themes/indigo-pink.css",
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/assets/css/app.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -87,12 +92,48 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "@angular/material/prebuilt-themes/indigo-pink.css",
+              "src/styles.css",
+              "assets/css/vendor/bootstrap.min.css",
+              "assets/css/vendor/icomoon.css",
+              "assets/css/vendor/remixicon.css",
+              "assets/css/vendor/magnifypopup.min.css",
+              "assets/css/vendor/odometer.min.css",
+              "assets/css/vendor/lightbox.min.css",
+              "assets/css/vendor/animation.min.css",
+              "assets/css/vendor/jqueru-ui-min.css",
+              "assets/css/vendor/swiper-bundle.min.css",
+              "assets/css/vendor/tipped.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "assets/js/vendor/modernizr.min.js",
+              "assets/js/vendor/jquery.min.js",
+              "assets/js/vendor/bootstrap.min.js",
+              "assets/js/vendor/sal.min.js",
+              "assets/js/vendor/backtotop.min.js",
+              "assets/js/vendor/magnifypopup.min.js",
+              "assets/js/vendor/jquery.countdown.min.js",
+              "assets/js/vendor/odometer.min.js",
+              "assets/js/vendor/isotop.min.js",
+              "assets/js/vendor/imageloaded.min.js",
+              "assets/js/vendor/lightbox.min.js",
+              "assets/js/vendor/paralax.min.js",
+              "assets/js/vendor/paralax-scroll.min.js",
+              "assets/js/vendor/jquery-ui.min.js",
+              "assets/js/vendor/swiper-bundle.min.js",
+              "assets/js/vendor/svg-inject.min.js",
+              "assets/js/vendor/vivus.min.js",
+              "assets/js/vendor/tipped.min.js",
+              "assets/js/vendor/smooth-scroll.min.js",
+              "assets/js/vendor/isInViewport.jquery.min.js",
+              "assets/js/app.js"
+            ]
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "bef914d7-3f83-4a04-b221-2c75c08255f4"
   }
 }

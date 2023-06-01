@@ -1,0 +1,21 @@
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { AhmedabadComponent } from './ahmedabad.component';
+
+describe('AhmedabadComponent', () => {
+  let component: AhmedabadComponent;
+  let fixture: ComponentFixture<AhmedabadComponent>;
+
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      declarations: [AhmedabadComponent]
+    });
+    fixture = TestBed.createComponent(AhmedabadComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});

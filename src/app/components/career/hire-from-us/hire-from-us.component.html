@@ -1,0 +1,171 @@
+<section class="edu-section-gap contact-form-area">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="contact-form">
+            <div class="section-title section-center">
+              <h3 class="title">Hire From Us</h3>
+              <h1>Fill The Form & Get Hire Digital Marketer From Us</h1>
+            </div>
+            <form
+              class="rnt-contact-form rwt-dynamic-form"
+              [formGroup]="form"
+              (ngSubmit)="submit()"
+            >
+              <div class="row row--10">
+                <div class="form-group col-lg-6">
+                  <label for="name">Name</label>
+                  <input
+                    type="text"
+                    name="name"
+                    formControlName="name"
+                    id="name"
+                    placeholder="Enter Your Name"
+                    class="form-control"
+                  />
+                  <div
+                    *ngIf="f['name'].touched && f['name'].invalid"
+                    class="alert alert-danger"
+                  >
+                    <div *ngIf="f['name'].errors && f['name'].errors['required']">
+                      Name is required.
+                    </div>
+                    <div
+                      *ngIf="f['name'].errors && f['name'].errors['minlength']"
+                    >
+                      Name should be 3 character.
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group col-lg-6">
+                  <label for="email">Email</label>
+                  <input
+                    formControlName="email"
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Your Email"
+                  />
+                  <div
+                    *ngIf="f['email'].touched && f['email'].invalid"
+                    class="alert alert-danger"
+                  >
+                    <div
+                      *ngIf="f['email'].errors && f['email'].errors['required']"
+                    >
+                      Email is required.
+                    </div>
+                    <div *ngIf="f['email'].errors && f['email'].errors['email']">
+                      Please, enter valid email address.
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="body">Body</label>
+                  <textarea
+                    formControlName="body"
+                    id="body"
+                    type="text"
+                    class="form-control"
+                  >
+                  </textarea>
+                  <div
+                    *ngIf="f['body'].touched && f['body'].invalid"
+                    class="alert alert-danger"
+                  >
+                    <div *ngIf="f['body'].errors && f['body'].errors['required']">
+                      Body is required.
+                    </div>
+                  </div>
+                </div>
+                <!-- <div class="form-group col-12">
+                    <input
+                      type="tel"
+                      name="contact-phone"
+                      id="contact-phone"
+                      placeholder="Phone"
+                    />
+                  </div>
+                  <div class="form-group col-lg-6">
+                    <select
+                      class="form-select"
+                      aria-label="Default
+                                        select example"
+                    >
+                      <option selected>Select Your City Name</option>
+                      <option value="1">Delhi</option>
+                      <option value="2">Surat</option>
+                      <option value="3">Ahmedabad</option>
+                      <option value="3">Bhopal</option>
+                      <option value="3">Jaipur</option>
+                      <option value="3">Chennai</option>
+                      <option value="3">Srinagar</option>
+                      <option value="3">Indore</option>
+                      <option value="3">Mumbai</option>
+                    </select>
+                  </div>
+                  <div class="form-group col-lg-6">
+                    <select
+                      class="form-select"
+                      aria-label="Default
+                                        select example"
+                    >
+                      <option selected>Do You Have Own Your Place</option>
+                      <option value="1">No</option>
+                      <option value="2">Yes</option>
+                    </select>
+                  </div>
+                  <div class="form-group col-12">
+                    <select
+                      class="form-select"
+                      aria-label="Default
+                                        select example"
+                    >
+                      <option selected>Do You Have Any Other Business</option>
+                      <option value="1">No</option>
+                      <option value="2">Yes</option>
+                    </select>
+                  </div> -->
+                <h3>Note: Franchises is not available for Pune City.</h3>
+                <div class="form-group col-12 text-center">
+                  <button
+                    class="rn-btn edu-btn submit-btn"
+                    [disabled]="form.invalid"
+                    name="submit"
+                    type="submit"
+                  >
+                    OK MAIL ME <i class="icon-4"></i>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <ul class="shape-group">
+      <li class="shape-1 scene">
+        <img
+          data-depth="-2"
+          src="https://edublink.html.devsblink.com/assets/images/about/shape-15.png"
+          alt="shape"
+        />
+      </li>
+      <li class="shape-2 scene">
+        <img
+          data-depth="2"
+          src="https://edublink.html.devsblink.com/assets/images/cta/shape-04.png"
+          alt="shape"
+        />
+      </li>
+      <li class="shape-3 scene"><span data-depth="1"></span></li>
+      <li class="shape-4 scene">
+        <img
+          data-depth="-2"
+          src="https://edublink.html.devsblink.com/assets/images/about/shape-13.png"
+          alt="shape"
+        />
+      </li>
+    </ul>
+  </section>
+  

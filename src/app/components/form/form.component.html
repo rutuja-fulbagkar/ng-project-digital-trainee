@@ -1,0 +1,10 @@
+<div style="width: 100%;align-items: center; text-align: center;">
+
+    <form [formGroup]="forms" ngsubmit="formdata()">
+        Name <input type="text" name="username" formControlName="username">
+        Phone <input type="text" name="usermobile" formControlName="usermobile">
+        E-mail <input type="text" name="useremail" formControlName="useremail">
+        User msg <input type="text" name="usermsg" formControlName="usermsg">
+        <button>save data</button>
+    </form>
+</div>

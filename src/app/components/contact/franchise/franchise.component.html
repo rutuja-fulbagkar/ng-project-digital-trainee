@@ -1,0 +1,1218 @@
+<!--=       Hero Banner Area Start      =-->
+<!--=====================================-->
+<div class="hero-banner hero-style-11 remote-training">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-5">
+        <div class="banner-content">
+          <h1 class="title">
+            Partner with Fastest Growing India’s 1st Practical
+            <span class="color-secondary">Digital Marketing</span> Training
+            Institute
+          </h1>
+
+          <div class="banner-btn">
+            <a href="course-one.html" class="edu-btn"
+              >Find courses <i class="icon-4"></i
+            ></a>
+          </div>
+          <ul class="shape-group">
+            <li class="shape-1 scene">
+              <img
+                data-depth="2"
+                src="assets/images/counterup/shape-05.png"
+                alt="Shape"
+              />
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-7">
+        <div class="banner-thumbnail">
+          <div class="thumbnail">
+            <img
+              src="assets/images/banner/pi-chart.webp"
+              alt="Pi-chart Image"
+            />
+          </div>
+          <ul class="shape-group">
+            <li class="shape-2 scene">
+              <img
+                data-depth="1.5"
+                src="assets/images/others/shape-42.png"
+                alt="Shape"
+              />
+            </li>
+            <li class="shape-3 scene">
+              <span data-depth="-2.5"></span>
+            </li>
+            <li class="shape-4">
+              <img
+                class="rotateit"
+                src="assets/images/counterup/shape-02.png"
+                alt="Shape"
+              />
+            </li>
+            <li class="shape-5 scene">
+              <img
+                data-depth="1.5"
+                src="assets/images/about/shape-13.png"
+                alt="Shape"
+              />
+            </li>
+            <!-- <li class="shape-6 scene" data-sal-delay="1000" data-sal="fade" data-sal-duration="1000">
+                              <img data-depth="-2" src="assets/images/about/shape-18.png" alt="Shape">
+                          </li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--=====================================-->
+<!--=      Contact Form Area Start      =-->
+<!--=====================================-->
+<section class="edu-section-gap contact-form-area">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="contact-form">
+          <div class="section-title section-center">
+            <h3 class="title">Get Partnership Details</h3>
+            <h1>Fill The Form & Get Our Details</h1>
+          </div>
+          <form
+            class="rnt-contact-form rwt-dynamic-form"
+            [formGroup]="form"
+            (ngSubmit)="submit()"
+          >
+            <div class="row row--10">
+              <div class="form-group col-lg-6">
+                <label for="name">Name</label>
+                <input
+                  type="text"
+                  name="name"
+                  formControlName="name"
+                  id="name"
+                  placeholder="Enter Your Name"
+                  class="form-control"
+                />
+                <div
+                  *ngIf="f['name'].touched && f['name'].invalid"
+                  class="alert alert-danger"
+                >
+                  <div *ngIf="f['name'].errors && f['name'].errors['required']">
+                    Name is required.
+                  </div>
+                  <div
+                    *ngIf="f['name'].errors && f['name'].errors['minlength']"
+                  >
+                    Name should be 3 character.
+                  </div>
+                </div>
+              </div>
+              <div class="form-group col-lg-6">
+                <label for="email">Email</label>
+                <input
+                  formControlName="email"
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Your Email"
+                />
+                <div
+                  *ngIf="f['email'].touched && f['email'].invalid"
+                  class="alert alert-danger"
+                >
+                  <div
+                    *ngIf="f['email'].errors && f['email'].errors['required']"
+                  >
+                    Email is required.
+                  </div>
+                  <div *ngIf="f['email'].errors && f['email'].errors['email']">
+                    Please, enter valid email address.
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="body">Body</label>
+                <textarea
+                  formControlName="body"
+                  id="body"
+                  type="text"
+                  class="form-control"
+                >
+                </textarea>
+                <div
+                  *ngIf="f['body'].touched && f['body'].invalid"
+                  class="alert alert-danger"
+                >
+                  <div *ngIf="f['body'].errors && f['body'].errors['required']">
+                    Body is required.
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="form-group col-12">
+                  <input
+                    type="tel"
+                    name="contact-phone"
+                    id="contact-phone"
+                    placeholder="Phone"
+                  />
+                </div>
+                <div class="form-group col-lg-6">
+                  <select
+                    class="form-select"
+                    aria-label="Default
+                                      select example"
+                  >
+                    <option selected>Select Your City Name</option>
+                    <option value="1">Delhi</option>
+                    <option value="2">Surat</option>
+                    <option value="3">Ahmedabad</option>
+                    <option value="3">Bhopal</option>
+                    <option value="3">Jaipur</option>
+                    <option value="3">Chennai</option>
+                    <option value="3">Srinagar</option>
+                    <option value="3">Indore</option>
+                    <option value="3">Mumbai</option>
+                  </select>
+                </div>
+                <div class="form-group col-lg-6">
+                  <select
+                    class="form-select"
+                    aria-label="Default
+                                      select example"
+                  >
+                    <option selected>Do You Have Own Your Place</option>
+                    <option value="1">No</option>
+                    <option value="2">Yes</option>
+                  </select>
+                </div>
+                <div class="form-group col-12">
+                  <select
+                    class="form-select"
+                    aria-label="Default
+                                      select example"
+                  >
+                    <option selected>Do You Have Any Other Business</option>
+                    <option value="1">No</option>
+                    <option value="2">Yes</option>
+                  </select>
+                </div> -->
+              <h3>Note: Franchises is not available for Pune City.</h3>
+              <div class="form-group col-12 text-center">
+                <button
+                  class="rn-btn edu-btn submit-btn"
+                  [disabled]="form.invalid"
+                  name="submit"
+                  type="submit"
+                >
+                  OK MAIL ME <i class="icon-4"></i>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <ul class="shape-group">
+    <li class="shape-1 scene">
+      <img
+        data-depth="-2"
+        src="https://edublink.html.devsblink.com/assets/images/about/shape-15.png"
+        alt="shape"
+      />
+    </li>
+    <li class="shape-2 scene">
+      <img
+        data-depth="2"
+        src="https://edublink.html.devsblink.com/assets/images/cta/shape-04.png"
+        alt="shape"
+      />
+    </li>
+    <li class="shape-3 scene"><span data-depth="1"></span></li>
+    <li class="shape-4 scene">
+      <img
+        data-depth="-2"
+        src="https://edublink.html.devsblink.com/assets/images/about/shape-13.png"
+        alt="shape"
+      />
+    </li>
+  </ul>
+</section>
+
+<!-- Start Categories Area  -->
+<div class="edu-categorie-area categorie-area-1 edu-section-gap">
+  <div class="container">
+    <div class="section-title section-center">
+      <span class="pre-title pre-textsecondary"
+        >PERFORMANCE ORIENTED DIGITAL MARKETING INSTITUTE</span
+      >
+      <h2 class="title">
+        Join Hands With One Of
+        <span class="color-primary">The Fastest Growing </span>Digital Marketing
+        Institute
+      </h2>
+      <span class="shape-line"><i class="icon-19"></i></span>
+    </div>
+    <div class="row g-5">
+      <div class="col-lg-3 col-sm-6">
+        <div
+          class="categorie-grid categorie-style-1 color-primary-style edublink-svg-animate"
+        >
+          <div class="icon">
+            <img
+              class="svgInject"
+              src="assets/images/animated-svg-icons/online-degree.svg"
+              alt="animated icon"
+            />
+            <!-- <i class="icon-9"></i> -->
+          </div>
+          <div class="content">
+            <a href="course-one.html">
+              <h5 class="title">Get to know Us</h5>
+            </a>
+            <p>
+              Get to know a to z about our system, plan and improvement cycle,
+              Returns, support, terms etc
+            </p>
+            <div class="course-remain">STEP 1</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-sm-6">
+        <div
+          class="categorie-grid categorie-style-1 color-secondary-style edublink-svg-animate"
+        >
+          <div class="icon">
+            <img
+              class="svgInject"
+              src="assets/images/animated-svg-icons/non-degree-programs.svg"
+              alt="animated icon"
+            />
+            <!-- <i class="icon-10"></i> -->
+          </div>
+          <div class="content">
+            <a href="course-one.html">
+              <h5 class="title">Become Partner With Us</h5>
+            </a>
+            <p>
+              Offer Digital Marketing Training by becoming Our Partner in your
+              geography.
+            </p>
+            <div class="course-remain">STEP 2</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-sm-6">
+        <div
+          class="categorie-grid categorie-style-1 color-extra08-style edublink-svg-animate"
+        >
+          <div class="icon">
+            <img
+              class="svgInject"
+              src="assets/images/animated-svg-icons/off-campus-programs.svg"
+              alt="animated icon"
+            />
+            <!-- <i class="icon-11"></i> -->
+          </div>
+          <div class="content">
+            <a href="course-one.html">
+              <h5 class="title">Get support in sales & Marketing</h5>
+            </a>
+            <p>
+              Support in Sales & Marketing, Faculty, Training content with
+              Online LMS by Digital Trainee.
+            </p>
+            <div class="course-remain">STEP 3</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-sm-6">
+        <div
+          class="categorie-grid categorie-style-1 color-extra05-style edublink-svg-animate"
+        >
+          <div class="icon">
+            <img
+              class="svgInject"
+              src="assets/images/animated-svg-icons/hybrid-distance-programs.svg"
+              alt="animated icon"
+            />
+            <!-- <i class="icon-12"></i> -->
+          </div>
+          <div class="content">
+            <a href="course-one.html">
+              <h5 class="title">Get High Returns on Investment</h5>
+            </a>
+            <p>
+              Get 200% to 350% Expected Returns in 3 Years on Initial
+              Investment.
+            </p>
+            <div class="course-remain">STEP 4</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Categories Area  -->
+<!--=====================================-->
+<!--=       About Area Start      		=-->
+<!--=====================================-->
+<div class="gap-bottom-equal edu-about-area about-style-2">
+  <div class="container edublink-animated-shape">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-7">
+        <div class="about-image-gallery">
+          <!-- <img
+            class="main-img-1"
+            src="assets/images/about/about-03.webp"
+            alt="About Image"
+          /> -->
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/HH08DydNdrs"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+          <!-- <div class="author-box" data-parallax='{"x": 0, "y": -120}'>
+            <div class="inner">
+              <div class="thumb">
+                <img src="assets/images/about/shape-03.png" alt="Shape Image" />
+              </div>
+              <div class="content">
+                <h4 class="title">Ray Sanchez</h4>
+                <p>Minim veniam nostrud exer citation.</p>
+              </div>
+            </div>
+          </div> -->
+          <div class="award-status bounce-slide">
+            <div class="inner">
+              <div class="icon">
+                <i class="icon-30"></i>
+              </div>
+              <div class="content">
+                <h6 class="title">20K+</h6>
+                <span class="subtitle">Enrolled Learners</span>
+              </div>
+            </div>
+          </div>
+          <ul class="shape-group">
+            <li class="shape-1 scene">
+              <img
+                data-depth="2"
+                src="assets/images/about/shape-38.png"
+                alt="Shape"
+              />
+            </li>
+            <li class="shape-2 scene">
+              <img
+                data-depth="-2"
+                src="assets/images/about/shape-37.png"
+                alt="Shape"
+              />
+            </li>
+            <li class="shape-3 scene">
+              <img
+                data-depth="1.8"
+                src="assets/images/about/shape-04.png"
+                alt="Shape"
+              />
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-5">
+        <div class="about-content">
+          <div class="section-title section-left">
+            <span class="pre-title"
+              >Performance Oriented Digital Marketing Institute</span
+            >
+            <!-- <h2 class="title">
+              Join Hands With One Of
+              <span class="color-secondary">The Fastest Growing </span> Digital
+              Marketing Institute In India
+            </h2> -->
+            <span class="shape-line"><i class="icon-19"></i></span>
+          </div>
+          <ul class="features-list">
+            <li>
+              Complete new setup promotion of your franchise on nearby areas.
+            </li>
+            <li>
+              Hiring the trainers and Training them according to Digital Trainee
+              standards.
+            </li>
+            <li>Training Student counsellors and other staff members.</li>
+            <li>
+              Lead Generation of the respective franchise will be taken care by
+              head office.
+            </li>
+            <li>
+              Study material and the assessments will be given by Digital
+              Trainee.
+            </li>
+            <li>
+              All the marketing activities of the franchise will be handled by
+              Digital Trainee.
+            </li>
+            <li>
+              The prerequisites of this opportunity are – plenty of passion,
+              enthusiasm and investment.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <ul class="shape-group">
+      <li class="shape-1 circle scene">
+        <span data-depth="-2.3"></span>
+      </li>
+    </ul>
+  </div>
+</div>
+<!--=====================================-->
+<!--=       Course Area Start      		=-->
+<!--=====================================-->
+<!-- Start Course Area  -->
+<div class="edu-course-area course-area-2 gap-tb-text bg-lighten03">
+  <div class="container">
+    <div class="section-title section-center">
+      <span class="pre-title">Become Partners</span>
+      <h2 class="title">Open Digital Trainee Franchise at Your Location</h2>
+      <span class="shape-line"><i class="icon-19"></i></span>
+    </div>
+    <div class="row g-5">
+      <!-- Start Single Course  -->
+      <div class="col-md-6 col-lg-4">
+        <div class="edu-course course-style-2 hover-button-bg-white">
+          <div class="inner">
+            <div class="thumbnail">
+              <a href="course-details.html">
+                <img
+                  src="assets/images/course/course-01.jpg"
+                  alt="Course Meta"
+                />
+              </a>
+              <div class="time-top">
+                <span class="duration"><i class="icon-61"></i>3 Weeks</span>
+              </div>
+            </div>
+            <div class="content">
+              <span class="course-level"
+                >Why own a Digital Trainee Franchise?</span
+              >
+              <h5 class="title">
+                <a href="#"
+                  >Digital Trainee’s franchise is a proven business model, which
+                  is low-cost and easy to run allowing you to become successful
+                  quickly. Look at some of the reasons why you should invest in
+                  a Digital Trainee franchise.</a
+                >
+              </h5>
+              <div class="course-rating">
+                <div class="rating">
+                  <i class="icon-23"></i>
+                  <i class="icon-23"></i>
+                  <i class="icon-23"></i>
+                  <i class="icon-23"></i>
+                  <i class="icon-23"></i>
+                </div>
+                <span class="rating-count">(5.0 /7 Rating)</span>
+              </div>
+              <!-- <div class="course-price">$29.00</div> -->
+              <ul class="course-meta">
+                <li><i class="icon-24"></i>8 Lessons</li>
+                <li><i class="icon-25"></i>20 Students</li>
+              </ul>
+            </div>
+          </div>
+          <div class="course-hover-content-wrapper">
+            <button class="wishlist-btn"><i class="icon-22"></i></button>
+          </div>
+          <div class="course-hover-content">
+            <div class="content">
+              <button class="wishlist-btn"><i class="icon-22"></i></button>
+              <span class="course-level"
+                >Why own a Digital Trainee Franchise?</span
+              >
+              <h5 class="title">
+                <a href="course-details.html"
+                  >Digital Trainee’s franchise is a proven business model, which
+                  is low-cost and easy to run allowing you to become successful
+                  quickly. Look at some of the reasons why you should invest in
+                  a Digital Trainee franchise.</a
+                >
+              </h5>
+              <div class="course-rating">
+                <div class="rating">
+                  <i class="icon-23"></i>
+                  <i class="icon-23"></i>
+                  <i class="icon-23"></i>
+                  <i class="icon-23"></i>
+                  <i class="icon-23"></i>
+                </div>
+                <span class="rating-count">(5.0 /7 Rating)</span>
+              </div>
+              <!-- <div class="course-price">$29.00</div> -->
+              <p>
+                Digital Trainee’s franchise is a proven business model, which is
+                low-cost and easy to run allowing you to become successful
+                quickly. Look at some of the reasons why you should invest in a
+                Digital Trainee franchise.
+              </p>
+              <ul class="course-meta">
+                <li><i class="icon-24"></i>8 Lessons</li>
+                <li><i class="icon-25"></i>20 Students</li>
+              </ul>
+              <a
+                href="course-details.html"
+                class="edu-btn btn-secondary btn-small"
+                >Enrolled <i class="icon-4"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Single Course  -->
+      <!-- Start Single Course  -->
+      <div class="col-md-6 col-lg-4">
+        <div class="edu-course course-style-2 hover-button-bg-white">
+          <div class="inner">
+            <div class="thumbnail">
+              <a href="course-details.html">
+                <img
+                  src="assets/images/course/course-02.jpg"
+                  alt="Course Meta"
+                />
+              </a>
+              <div class="time-top">
+                <span class="duration"><i class="icon-61"></i>8 Weeks</span>
+              </div>
+            </div>
+            <div class="content">
+              <span class="course-level">Low Investment</span>
+              <h5 class="title">
+                <a href="#"
+                  >Our unique business model will enable you to start your own
+                  training institute with low investment with high yield. Since
+                  Digital Trainee is established and widely known institute of
+                  India, you don’t need heavy marketing and advertisements to
+                  convince students about the quality of the training you will
+                  be offering.</a
+                >
+              </h5>
+              <div class="course-rating">
+                <div class="rating">
+                  <i class="icon-23"></i>
+                  <i class="icon-23"></i>
+                  <i class="icon-23"></i>
+                  <i class="icon-23"></i>
+                  <i class="icon-23"></i>
+                </div>
+                <span class="rating-count">(4.5 /9 Rating)</span>
+              </div>
+              <!-- <div class="course-price">$49.00</div> -->
+              <ul class="course-meta">
+                <li><i class="icon-24"></i>15 Lessons</li>
+                <li><i class="icon-25"></i>35 Students</li>
+              </ul>
+            </div>
+          </div>
+          <div class="course-hover-content-wrapper">
+            <button class="wishlist-btn"><i class="icon-22"></i></button>
+          </div>
+          <div class="course-hover-content">
+            <div class="content">
+              <button class="wishlist-btn"><i class="icon-22"></i></button>
+              <span class="course-level">Low Investment</span>
+              <h5 class="title">
+                <a href="course-details.html"
+                  >Our unique business model will enable you to start your own
+                  training institute with low investment with high yield. Since
+                  Digital Trainee is established and widely known institute of
+                  India, you don’t need heavy marketing and advertisements to
+                  convince students about the quality of the training you will
+                  be offering.</a
+                >
+              </h5>
+              <div class="course-rating">
+                <div class="rating">
+                  <i class="icon-23"></i>
+                  <i class="icon-23"></i>
+                  <i class="icon-23"></i>
+                  <i class="icon-23"></i>
+                  <i class="icon-23"></i>
+                </div>
+                <span class="rating-count">(4.5 /9 Rating)</span>
+              </div>
+              <!-- <div class="course-price">$49.00</div> -->
+              <p>
+                Our unique business model will enable you to start your own
+                training institute with low investment with high yield. Since
+                Digital Trainee is established and widely known institute of
+                India, you don’t need heavy marketing and advertisements to
+                convince students about the quality of the training you will be
+                offering.
+              </p>
+              <ul class="course-meta">
+                <li><i class="icon-24"></i>15 Lessons</li>
+                <li><i class="icon-25"></i>35 Students</li>
+              </ul>
+              <a
+                href="course-details.html"
+                class="edu-btn btn-secondary btn-small"
+                >Enrolled <i class="icon-4"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Single Course  -->
+      <!-- Start Single Course  -->
+      <div class="col-md-6 col-lg-4">
+        <div class="edu-course course-style-2 hover-button-bg-white">
+          <div class="inner">
+            <div class="thumbnail">
+              <a href="course-details.html">
+                <img
+                  src="assets/images/course/course-03.jpg"
+                  alt="Course Meta"
+                />
+              </a>
+              <div class="time-top">
+                <span class="duration"><i class="icon-61"></i>3 Weeks</span>
+              </div>
+            </div>
+            <div class="content">
+              <span class="course-level">Proven Business Model</span>
+              <h5 class="title">
+                <a href="#"
+                  >Our proven business model enables you to generate revenue and
+                  make profit from very first day of the inception. With low
+                  franchise fee, pay per student model and transparent royalty
+                  fee, you will be able to quickly succeed in the business.</a
+                >
+              </h5>
+              <div class="course-rating">
+                <div class="rating">
+                  <i class="icon-23"></i>
+                  <i class="icon-23"></i>
+                  <i class="icon-23"></i>
+                  <i class="icon-23"></i>
+                  <i class="icon-23"></i>
+                </div>
+                <span class="rating-count">(4.9 /7 Rating)</span>
+              </div>
+              <!-- <div class="course-price">$35.00</div> -->
+              <ul class="course-meta">
+                <li><i class="icon-24"></i>13 Lessons</li>
+                <li><i class="icon-25"></i>18 Students</li>
+              </ul>
+            </div>
+          </div>
+          <div class="course-hover-content-wrapper">
+            <button class="wishlist-btn"><i class="icon-22"></i></button>
+          </div>
+          <div class="course-hover-content">
+            <div class="content">
+              <button class="wishlist-btn"><i class="icon-22"></i></button>
+              <span class="course-level">Proven Business Model</span>
+              <h5 class="title">
+                <a href="course-details.html"
+                  >Our proven business model enables you to generate revenue and
+                  make profit from very first day of the inception. With low
+                  franchise fee, pay per student model and transparent royalty
+                  fee, you will be able to quickly succeed in the business.</a
+                >
+              </h5>
+              <div class="course-rating">
+                <div class="rating">
+                  <i class="icon-23"></i>
+                  <i class="icon-23"></i>
+                  <i class="icon-23"></i>
+                  <i class="icon-23"></i>
+                  <i class="icon-23"></i>
+                </div>
+                <span class="rating-count">(4.9 /7 Rating)</span>
+              </div>
+              <!-- <div class="course-price">$35.00</div> -->
+              <p>
+                Our proven business model enables you to generate revenue and
+                make profit from very first day of the inception. With low
+                franchise fee, pay per student model and transparent royalty
+                fee, you will be able to quickly succeed in the business.
+              </p>
+              <ul class="course-meta">
+                <li><i class="icon-24"></i>13 Lessons</li>
+                <li><i class="icon-25"></i>18 Students</li>
+              </ul>
+              <a
+                href="course-details.html"
+                class="edu-btn btn-secondary btn-small"
+                >Enrolled <i class="icon-4"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Single Course  -->
+    </div>
+    <br />
+    <div class="row g-5">
+      <!-- Start Single Course  -->
+      <div class="col-md-6 col-lg-4">
+        <div class="edu-course course-style-2 hover-button-bg-white">
+          <div class="inner">
+            <div class="thumbnail">
+              <a href="course-details.html">
+                <img
+                  src="assets/images/course/course-01.jpg"
+                  alt="Course Meta"
+                />
+              </a>
+              <div class="time-top">
+                <span class="duration"><i class="icon-61"></i>3 Weeks</span>
+              </div>
+            </div>
+            <div class="content">
+              <span class="course-level">Growing Industry</span>
+              <h5 class="title">
+                <a href="#"
+                  >Digital marketing Industry is growing rapidly at an
+                  incredible pace. With companies and brands embracing it like
+                  never before, there is no stopping to it. India is the
+                  second-largest internet user base in the world. Since there is
+                  lot of talent gap in digital marketing industry, many
+                  companies</a
+                >
+              </h5>
+              <div class="course-rating">
+                <div class="rating">
+                  <i class="icon-23"></i>
+                  <i class="icon-23"></i>
+                  <i class="icon-23"></i>
+                  <i class="icon-23"></i>
+                  <i class="icon-23"></i>
+                </div>
+                <span class="rating-count">(5.0 /7 Rating)</span>
+              </div>
+              <!-- <div class="course-price">$29.00</div> -->
+              <ul class="course-meta">
+                <li><i class="icon-24"></i>8 Lessons</li>
+                <li><i class="icon-25"></i>20 Students</li>
+              </ul>
+            </div>
+          </div>
+          <div class="course-hover-content-wrapper">
+            <button class="wishlist-btn"><i class="icon-22"></i></button>
+          </div>
+          <div class="course-hover-content">
+            <div class="content">
+              <button class="wishlist-btn"><i class="icon-22"></i></button>
+              <span class="course-level">Growing Industry</span>
+              <h5 class="title">
+                <a href="course-details.html"
+                  >Digital marketing Industry is growing rapidly at an
+                  incredible pace. With companies and brands embracing it like
+                  never before, there is no stopping to it. India is the
+                  second-largest internet user base in the world. Since there is
+                  lot of talent gap in digital marketing industry, many
+                  companies</a
+                >
+              </h5>
+              <div class="course-rating">
+                <div class="rating">
+                  <i class="icon-23"></i>
+                  <i class="icon-23"></i>
+                  <i class="icon-23"></i>
+                  <i class="icon-23"></i>
+                  <i class="icon-23"></i>
+                </div>
+                <span class="rating-count">(5.0 /7 Rating)</span>
+              </div>
+              <!-- <div class="course-price">$29.00</div> -->
+              <p>
+                Digital marketing Industry is growing rapidly at an incredible
+                pace. With companies and brands embracing it like never before,
+                there is no stopping to it. India is the second-largest internet
+                user base in the world. Since there is lot of talent gap in
+                digital marketing industry, many companies
+              </p>
+              <ul class="course-meta">
+                <li><i class="icon-24"></i>8 Lessons</li>
+                <li><i class="icon-25"></i>20 Students</li>
+              </ul>
+              <a
+                href="course-details.html"
+                class="edu-btn btn-secondary btn-small"
+                >Enrolled <i class="icon-4"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Single Course  -->
+      <!-- Start Single Course  -->
+      <div class="col-md-6 col-lg-4">
+        <div class="edu-course course-style-2 hover-button-bg-white">
+          <div class="inner">
+            <div class="thumbnail">
+              <a href="course-details.html">
+                <img
+                  src="assets/images/course/course-02.jpg"
+                  alt="Course Meta"
+                />
+              </a>
+              <div class="time-top">
+                <span class="duration"><i class="icon-61"></i>8 Weeks</span>
+              </div>
+            </div>
+            <div class="content">
+              <span class="course-level">Comprehensive Support</span>
+              <h5 class="title">
+                <a href="#"
+                  >Whether you are a first-time franchise business owner or a
+                  seasoned entrepreneur, Digital Trainee’s team will help you in
+                  starting your own business. We will provide initial training
+                  at Digital Trainee’s head office on everything from business
+                  operations, sales and marketing,</a
+                >
+              </h5>
+              <div class="course-rating">
+                <div class="rating">
+                  <i class="icon-23"></i>
+                  <i class="icon-23"></i>
+                  <i class="icon-23"></i>
+                  <i class="icon-23"></i>
+                  <i class="icon-23"></i>
+                </div>
+                <span class="rating-count">(4.5 /9 Rating)</span>
+              </div>
+              <!-- <div class="course-price">$49.00</div> -->
+              <ul class="course-meta">
+                <li><i class="icon-24"></i>15 Lessons</li>
+                <li><i class="icon-25"></i>35 Students</li>
+              </ul>
+            </div>
+          </div>
+          <div class="course-hover-content-wrapper">
+            <button class="wishlist-btn"><i class="icon-22"></i></button>
+          </div>
+          <div class="course-hover-content">
+            <div class="content">
+              <button class="wishlist-btn"><i class="icon-22"></i></button>
+              <span class="course-level">Comprehensive Support</span>
+              <h5 class="title">
+                <a href="course-details.html"
+                  >Whether you are a first-time franchise business owner or a
+                  seasoned entrepreneur, Digital Trainee’s team will help you in
+                  starting your own business. We will provide initial training
+                  at Digital Trainee’s head office on everything from business
+                  operations, sales and marketing,</a
+                >
+              </h5>
+              <div class="course-rating">
+                <div class="rating">
+                  <i class="icon-23"></i>
+                  <i class="icon-23"></i>
+                  <i class="icon-23"></i>
+                  <i class="icon-23"></i>
+                  <i class="icon-23"></i>
+                </div>
+                <span class="rating-count">(4.5 /9 Rating)</span>
+              </div>
+              <!-- <div class="course-price">$49.00</div> -->
+              <p>
+                Whether you are a first-time franchise business owner or a
+                seasoned entrepreneur, Digital Trainee’s team will help you in
+                starting your own business. We will provide initial training at
+                Digital Trainee’s head office on everything from business
+                operations, sales and marketing,
+              </p>
+              <ul class="course-meta">
+                <li><i class="icon-24"></i>15 Lessons</li>
+                <li><i class="icon-25"></i>35 Students</li>
+              </ul>
+              <a
+                href="course-details.html"
+                class="edu-btn btn-secondary btn-small"
+                >Enrolled <i class="icon-4"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Single Course  -->
+    </div>
+    <div class="course-view-all">
+      <a href="#" class="edu-btn">Browse more courses <i class="icon-4"></i></a>
+    </div>
+  </div>
+</div>
+<!-- End Course Area -->
+
+
+<!--=====================================-->
+<!--=      Call TO Action Area Start    =-->
+<!--=====================================-->
+<!-- Start Ad Banner Area  -->
+<div class="remote-training-wrapper edu-cta-banner-area cta-banner-8">
+  <div class="container">
+    <div class="edu-cta-banner">
+      <div class="row justify-content-center">
+        <div class="col-lg-9">
+          <div class="section-title section-center">
+            <h2 class="title">Register To Get Partnership Details</h2>
+            <div class="subs-button">
+              <button class="edu-btn btn-medium" type="button">
+                Get Started Now <i class="icon-4"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <ul class="shape-group">
+        <li class="shape-01 scene">
+          <img
+            data-depth="2.5"
+            src="https://edublink.html.devsblink.com/assets/images/cta/shape-38.png"
+            alt="shape"
+          />
+        </li>
+        <li class="shape-02 scene">
+          <img
+            data-depth="-2.5"
+            src="https://edublink.html.devsblink.com/assets/images/cta/shape-42.png"
+            alt="shape"
+          />
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- End Ad Banner Area  -->
+<!--=====================================-->
+<!--=          Blog Area Start          =-->
+<!--=====================================-->
+<!-- Start Blog Area  -->
+<div class="edu-blog-area blog-area-1 edu-section-gap">
+  <div class="container">
+    <div class="section-title section-center">
+      <span class="pre-title">OUR Testimonials</span>
+      <h2 class="title">Outcomes - Meet Our Successful Alumni</h2>
+      <span class="shape-line"><i class="icon-19"></i></span>
+    </div>
+    <div class="row g-5">
+      <!-- Start Blog Grid  -->
+      <div class="col-lg-4 col-md-6 col-12">
+        <div class="edu-blog blog-style-1 remote-traning-sytle">
+          <div class="inner">
+            <div class="thumbnail">
+              <a href="blog-details.html">
+                <iframe
+                  width="380"
+                  height="315"
+                  src="https://www.youtube.com/embed/UW6WhqDvpmg"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              </a>
+            </div>
+            <div class="content">
+              <h5 class="title">
+                <a href="blog-details.html">Review & Testimonial</a>
+              </h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Blog Grid  -->
+      <!-- Start Blog Grid  -->
+      <div class="col-lg-4 col-md-6 col-12">
+        <div class="edu-blog blog-style-1 remote-traning-sytle">
+          <div class="inner">
+            <div class="thumbnail">
+              <a href="blog-details.html">
+                <iframe
+                  width="380"
+                  height="315"
+                  src="https://www.youtube.com/embed/cHzLxqXSuAk"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              </a>
+            </div>
+            <div class="content">
+              <h5 class="title">
+                <a href="blog-details.html">Review & Testimonial</a>
+              </h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Blog Grid  -->
+      <!-- Start Blog Grid  -->
+      <div class="col-lg-4 col-md-6 col-12">
+        <div class="edu-blog blog-style-1 remote-traning-sytle">
+          <div class="inner">
+            <div class="thumbnail">
+              <a href="blog-details.html">
+                <iframe
+                  width="380"
+                  height="315"
+                  src="https://www.youtube.com/embed/D1xMsVnu6aU"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              </a>
+            </div>
+            <div class="content">
+              <h5 class="title">
+                <a href="blog-details.html">Review & Testimonial</a>
+              </h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Blog Grid  -->
+    </div>
+  </div>
+  <ul class="shape-group">
+    <li class="shape-1 scene">
+      <img
+        data-depth="-1.4"
+        src="https://edublink.html.devsblink.com/assets/images/about/shape-02.png"
+        alt="Shape"
+      />
+    </li>
+    <li class="shape-2 scene">
+      <span data-depth="2.5"></span>
+    </li>
+    <li class="shape-3 scene">
+      <img
+        data-depth="-2.3"
+        src="https://edublink.html.devsblink.com/assets/images/counterup/shape-05.png"
+        alt="Shape"
+      />
+    </li>
+  </ul>
+</div>
+<!-- End Blog Area  -->
+<div class="edu-brand-area brand-area-1 section-gap-equal remote-brand">
+  <div class="container">
+    <div class="section-title section-center">
+      <span class="pre-title">Our Partnerss</span>
+      <h2 class="title">Here Is Our Requirement From A Franchise</h2>
+      <span class="shape-line"><i class="icon-19"></i></span>
+    </div>
+    <div class="row">
+      <div class="col-lg-5">
+        <div class="brand-section-heading">
+          <div class="section-title section-left">
+            <!-- <span class="pre-title">Our Partners</span>
+         <h2 class="title">Here Is Our Requirement From A Franchise</h2> -->
+
+            <ul class="features-list">
+              <li>
+                We are looking for Passionate people who give more importance to
+                quality and service.
+              </li>
+              <li>
+                Who is keen to help Candidates in achieving their goals and help
+                them till they achieve in their career.
+              </li>
+              <li>
+                The franchise head should bear the whole responsibility of the
+                respective franchise..
+              </li>
+              <li>
+                Should have fair understanding about the education and relevant
+                events happening near to their centers.
+              </li>
+              <li>
+                Study material and the assessments will be given by Digital
+                Trainee.
+              </li>
+              <li>
+                All the marketing activities of the franchise will be handled by
+                Digital Trainee.
+              </li>
+              <li>
+                Need to build relationships with college professors and maintain
+                a good rapo with the students.
+              </li>
+              <li>
+                Academy center board should be visible to the people walking
+                around.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-7">
+        <div class="brand-grid-wrap">
+          <div class="brand-grid">
+            <img
+              src="https://edublink.html.devsblink.com/assets/images/brand/brand-01.png"
+              alt="Brand Logo"
+            />
+          </div>
+          <div class="brand-grid">
+            <img
+              src="https://edublink.html.devsblink.com/assets/images/brand/brand-02.png"
+              alt="Brand Logo"
+            />
+          </div>
+          <div class="brand-grid">
+            <img
+              src="https://edublink.html.devsblink.com/assets/images/brand/brand-03.png"
+              alt="Brand Logo"
+            />
+          </div>
+          <div class="brand-grid">
+            <img
+              src="https://edublink.html.devsblink.com/assets/images/brand/brand-04.png"
+              alt="Brand Logo"
+            />
+          </div>
+          <div class="brand-grid">
+            <img
+              src="https://edublink.html.devsblink.com/assets/images/brand/brand-05.png"
+              alt="Brand Logo"
+            />
+          </div>
+          <div class="brand-grid">
+            <img
+              src="https://edublink.html.devsblink.com/assets/images/brand/brand-06.png"
+              alt="Brand Logo"
+            />
+          </div>
+          <div class="brand-grid">
+            <img
+              src="https://edublink.html.devsblink.com/assets/images/brand/brand-07.png"
+              alt="Brand Logo"
+            />
+          </div>
+          <div class="brand-grid">
+            <img
+              src="https://edublink.html.devsblink.com/assets/images/brand/brand-08.png"
+              alt="Brand Logo"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
