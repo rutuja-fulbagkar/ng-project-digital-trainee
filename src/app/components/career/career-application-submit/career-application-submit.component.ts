@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators} from '@angular/forms';
 
 @Component({
-  selector: 'app-testing',
-  templateUrl: './testing.component.html',
-  styleUrls: ['./testing.component.css']
+  selector: 'app-career-application-submit',
+  templateUrl: './career-application-submit.component.html',
+  styleUrls: ['./career-application-submit.component.css']
 })
-export class TestingComponent {
+export class CareerApplicationSubmitComponent {
   form = new FormGroup({
     name: new FormControl('', [Validators.required, Validators.minLength(3)]),
     email: new FormControl('', [Validators.required, Validators.email]),

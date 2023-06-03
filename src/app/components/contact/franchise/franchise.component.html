@@ -12,17 +12,15 @@
           </h1>
 
           <div class="banner-btn">
-            <a href="course-one.html" class="edu-btn"
-              >Find courses <i class="icon-4"></i
-            ></a>
+            <a href="course-one.html" class="edu-btn">Find courses <i
+                class="icon-4"></i></a>
           </div>
           <ul class="shape-group">
             <li class="shape-1 scene">
               <img
                 data-depth="2"
                 src="assets/images/counterup/shape-05.png"
-                alt="Shape"
-              />
+                alt="Shape" />
             </li>
           </ul>
         </div>
@@ -32,16 +30,14 @@
           <div class="thumbnail">
             <img
               src="assets/images/banner/pi-chart.webp"
-              alt="Pi-chart Image"
-            />
+              alt="Pi-chart Image" />
           </div>
           <ul class="shape-group">
             <li class="shape-2 scene">
               <img
                 data-depth="1.5"
                 src="assets/images/others/shape-42.png"
-                alt="Shape"
-              />
+                alt="Shape" />
             </li>
             <li class="shape-3 scene">
               <span data-depth="-2.5"></span>
@@ -50,15 +46,13 @@
               <img
                 class="rotateit"
                 src="assets/images/counterup/shape-02.png"
-                alt="Shape"
-              />
+                alt="Shape" />
             </li>
             <li class="shape-5 scene">
               <img
                 data-depth="1.5"
                 src="assets/images/about/shape-13.png"
-                alt="Shape"
-              />
+                alt="Shape" />
             </li>
             <!-- <li class="shape-6 scene" data-sal-delay="1000" data-sal="fade" data-sal-duration="1000">
                               <img data-depth="-2" src="assets/images/about/shape-18.png" alt="Shape">
@@ -84,8 +78,7 @@
           <form
             class="rnt-contact-form rwt-dynamic-form"
             [formGroup]="form"
-            (ngSubmit)="submit()"
-          >
+            (ngSubmit)="submit()">
             <div class="row row--10">
               <div class="form-group col-lg-6">
                 <label for="name">Name</label>
@@ -95,18 +88,15 @@
                   formControlName="name"
                   id="name"
                   placeholder="Enter Your Name"
-                  class="form-control"
-                />
+                  class="form-control" />
                 <div
                   *ngIf="f['name'].touched && f['name'].invalid"
-                  class="alert alert-danger"
-                >
+                  class="alert alert-danger">
                   <div *ngIf="f['name'].errors && f['name'].errors['required']">
                     Name is required.
                   </div>
                   <div
-                    *ngIf="f['name'].errors && f['name'].errors['minlength']"
-                  >
+                    *ngIf="f['name'].errors && f['name'].errors['minlength']">
                     Name should be 3 character.
                   </div>
                 </div>
@@ -118,15 +108,12 @@
                   type="email"
                   name="email"
                   id="email"
-                  placeholder="Your Email"
-                />
+                  placeholder="Your Email" />
                 <div
                   *ngIf="f['email'].touched && f['email'].invalid"
-                  class="alert alert-danger"
-                >
+                  class="alert alert-danger">
                   <div
-                    *ngIf="f['email'].errors && f['email'].errors['required']"
-                  >
+                    *ngIf="f['email'].errors && f['email'].errors['required']">
                     Email is required.
                   </div>
                   <div *ngIf="f['email'].errors && f['email'].errors['email']">
@@ -134,84 +121,112 @@
                   </div>
                 </div>
               </div>
-              <div class="form-group">
-                <label for="body">Body</label>
-                <textarea
-                  formControlName="body"
-                  id="body"
-                  type="text"
-                  class="form-control"
-                >
-                </textarea>
+
+              <div class="form-group col-12">
+                <label for="name">Phone Number</label>
+                <input
+                  type="tel"
+                  name="mob"
+                  id="mob"
+                  placeholder="Enter Your Phone Number"
+                  formControlName="mob" />
                 <div
-                  *ngIf="f['body'].touched && f['body'].invalid"
-                  class="alert alert-danger"
-                >
-                  <div *ngIf="f['body'].errors && f['body'].errors['required']">
-                    Body is required.
+                  *ngIf="f['mob'].touched && f['mob'].invalid"
+                  class="alert alert-danger">
+                  <div *ngIf="f['mob'].errors?.['required']">
+                    Please enter mobile number
+                  </div>
+                  <div *ngIf="f['mob'].errors?.['pattern']">
+                    Mobile number is not 10 digit
                   </div>
                 </div>
               </div>
-              <!-- <div class="form-group col-12">
-                  <input
-                    type="tel"
-                    name="contact-phone"
-                    id="contact-phone"
-                    placeholder="Phone"
-                  />
+              <div class="form-group col-lg-6">
+                <mat-form-field>
+                  <mat-select formControlName="city">
+                    <mat-option value selected>Select Your City Name</mat-option>
+                    <mat-option value="Delhi">Delhi</mat-option>
+                    <mat-option value="Surat">Surat</mat-option>
+                    <mat-option value="Ahmedabad">Ahmedabad</mat-option>
+                    <mat-option value="Bhopal">Bhopal</mat-option>
+                    <mat-option value="Jaipur">Jaipur</mat-option>
+                    <mat-option value="Chennai">Chennai</mat-option>
+                    <mat-option value="Srinagar">Srinagar</mat-option>
+                    <mat-option value="Indore">Indore</mat-option>
+                    <mat-option value="Mumbai">Mumbai</mat-option>
+                  </mat-select>
+                </mat-form-field>
+                <div
+                *ngIf="f['city'].touched && f['city'].invalid"
+                class="alert alert-danger">
+                <div *ngIf="f['city'].errors?.['required']">
+                  --Select Your City Name--
                 </div>
-                <div class="form-group col-lg-6">
-                  <select
-                    class="form-select"
-                    aria-label="Default
-                                      select example"
-                  >
-                    <option selected>Select Your City Name</option>
-                    <option value="1">Delhi</option>
-                    <option value="2">Surat</option>
-                    <option value="3">Ahmedabad</option>
-                    <option value="3">Bhopal</option>
-                    <option value="3">Jaipur</option>
-                    <option value="3">Chennai</option>
-                    <option value="3">Srinagar</option>
-                    <option value="3">Indore</option>
-                    <option value="3">Mumbai</option>
-                  </select>
+              </div>
+              </div>
+              <div class="form-group col-lg-6">
+                <mat-form-field>
+                  <mat-select formControlName="place">
+                    <mat-option value selected>Do You Have Your Own Place</mat-option>
+                    <mat-option value="No">No</mat-option>
+                    <mat-option value="Yes">Yes</mat-option>
+                  </mat-select>
+                </mat-form-field>
+                 <div
+                    *ngIf="f['place'].touched && f['place'].invalid"
+                    class="alert alert-danger">
+                    <div *ngIf="f['place'].errors?.['required']">
+                      --Select Valid Option--
+                    </div>
+                  </div>
+              </div>
+              </div>
+              <div class="form-group col-12">
+                <mat-form-field>
+                  <mat-select formControlName="business">
+                    <mat-option value selected>Do You Have Any Other Business</mat-option>
+                    <mat-option value="No">No</mat-option>
+                    <mat-option value="Yes" (click)="ToogleDisplayDiv()">Yes</mat-option>
+                  </mat-select>
+                </mat-form-field>
+                <div
+                  *ngIf="f['business'].touched && f['business'].invalid"
+                  class="alert alert-danger">
+                  <div *ngIf="f['business'].errors?.['required']">
+                    --Select Valid Option--
+                  </div>
                 </div>
-                <div class="form-group col-lg-6">
-                  <select
-                    class="form-select"
-                    aria-label="Default
-                                      select example"
-                  >
-                    <option selected>Do You Have Own Your Place</option>
-                    <option value="1">No</option>
-                    <option value="2">Yes</option>
-                  </select>
+              </div>
+              <div class="form-group" [hidden]="isShowDiv">
+
+                <textarea
+                  formControlName="describe"
+                  id="body"
+                  type="text"
+                  class="form-control"
+                  placeholder="Describe Your Business">
+                </textarea>
+                <div
+                
+                  *ngIf="f['describe'].touched && f['describe'].invalid"
+                  class="alert alert-danger">
+                  <div *ngIf="f['describe'].errors && f['describe'].errors['required']">
+                    Describe Your Business
+
+                  </div>
                 </div>
-                <div class="form-group col-12">
-                  <select
-                    class="form-select"
-                    aria-label="Default
-                                      select example"
-                  >
-                    <option selected>Do You Have Any Other Business</option>
-                    <option value="1">No</option>
-                    <option value="2">Yes</option>
-                  </select>
-                </div> -->
+              </div>
               <h3>Note: Franchises is not available for Pune City.</h3>
               <div class="form-group col-12 text-center">
                 <button
                   class="rn-btn edu-btn submit-btn"
-                  [disabled]="form.invalid"
+                  
                   name="submit"
-                  type="submit"
-                >
+                  type="submit">
                   OK MAIL ME <i class="icon-4"></i>
                 </button>
               </div>
-            </div>
+          
           </form>
         </div>
       </div>
@@ -222,23 +237,20 @@
       <img
         data-depth="-2"
         src="https://edublink.html.devsblink.com/assets/images/about/shape-15.png"
-        alt="shape"
-      />
+        alt="shape" />
     </li>
     <li class="shape-2 scene">
       <img
         data-depth="2"
         src="https://edublink.html.devsblink.com/assets/images/cta/shape-04.png"
-        alt="shape"
-      />
+        alt="shape" />
     </li>
     <li class="shape-3 scene"><span data-depth="1"></span></li>
     <li class="shape-4 scene">
       <img
         data-depth="-2"
         src="https://edublink.html.devsblink.com/assets/images/about/shape-13.png"
-        alt="shape"
-      />
+        alt="shape" />
     </li>
   </ul>
 </section>
@@ -247,9 +259,8 @@
 <div class="edu-categorie-area categorie-area-1 edu-section-gap">
   <div class="container">
     <div class="section-title section-center">
-      <span class="pre-title pre-textsecondary"
-        >PERFORMANCE ORIENTED DIGITAL MARKETING INSTITUTE</span
-      >
+      <span class="pre-title pre-textsecondary">PERFORMANCE ORIENTED DIGITAL
+        MARKETING INSTITUTE</span>
       <h2 class="title">
         Join Hands With One Of
         <span class="color-primary">The Fastest Growing </span>Digital Marketing
@@ -260,14 +271,12 @@
     <div class="row g-5">
       <div class="col-lg-3 col-sm-6">
         <div
-          class="categorie-grid categorie-style-1 color-primary-style edublink-svg-animate"
-        >
+          class="categorie-grid categorie-style-1 color-primary-style edublink-svg-animate">
           <div class="icon">
             <img
               class="svgInject"
               src="assets/images/animated-svg-icons/online-degree.svg"
-              alt="animated icon"
-            />
+              alt="animated icon" />
             <!-- <i class="icon-9"></i> -->
           </div>
           <div class="content">
@@ -284,14 +293,12 @@
       </div>
       <div class="col-lg-3 col-sm-6">
         <div
-          class="categorie-grid categorie-style-1 color-secondary-style edublink-svg-animate"
-        >
+          class="categorie-grid categorie-style-1 color-secondary-style edublink-svg-animate">
           <div class="icon">
             <img
               class="svgInject"
               src="assets/images/animated-svg-icons/non-degree-programs.svg"
-              alt="animated icon"
-            />
+              alt="animated icon" />
             <!-- <i class="icon-10"></i> -->
           </div>
           <div class="content">
@@ -308,14 +315,12 @@
       </div>
       <div class="col-lg-3 col-sm-6">
         <div
-          class="categorie-grid categorie-style-1 color-extra08-style edublink-svg-animate"
-        >
+          class="categorie-grid categorie-style-1 color-extra08-style edublink-svg-animate">
           <div class="icon">
             <img
               class="svgInject"
               src="assets/images/animated-svg-icons/off-campus-programs.svg"
-              alt="animated icon"
-            />
+              alt="animated icon" />
             <!-- <i class="icon-11"></i> -->
           </div>
           <div class="content">
@@ -332,14 +337,12 @@
       </div>
       <div class="col-lg-3 col-sm-6">
         <div
-          class="categorie-grid categorie-style-1 color-extra05-style edublink-svg-animate"
-        >
+          class="categorie-grid categorie-style-1 color-extra05-style edublink-svg-animate">
           <div class="icon">
             <img
               class="svgInject"
               src="assets/images/animated-svg-icons/hybrid-distance-programs.svg"
-              alt="animated icon"
-            />
+              alt="animated icon" />
             <!-- <i class="icon-12"></i> -->
           </div>
           <div class="content">
@@ -378,8 +381,7 @@
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
+            allowfullscreen></iframe>
           <!-- <div class="author-box" data-parallax='{"x": 0, "y": -120}'>
             <div class="inner">
               <div class="thumb">
@@ -407,22 +409,19 @@
               <img
                 data-depth="2"
                 src="assets/images/about/shape-38.png"
-                alt="Shape"
-              />
+                alt="Shape" />
             </li>
             <li class="shape-2 scene">
               <img
                 data-depth="-2"
                 src="assets/images/about/shape-37.png"
-                alt="Shape"
-              />
+                alt="Shape" />
             </li>
             <li class="shape-3 scene">
               <img
                 data-depth="1.8"
                 src="assets/images/about/shape-04.png"
-                alt="Shape"
-              />
+                alt="Shape" />
             </li>
           </ul>
         </div>
@@ -430,9 +429,8 @@
       <div class="col-lg-5">
         <div class="about-content">
           <div class="section-title section-left">
-            <span class="pre-title"
-              >Performance Oriented Digital Marketing Institute</span
-            >
+            <span class="pre-title">Performance Oriented Digital Marketing
+              Institute</span>
             <!-- <h2 class="title">
               Join Hands With One Of
               <span class="color-secondary">The Fastest Growing </span> Digital
@@ -496,24 +494,20 @@
               <a href="course-details.html">
                 <img
                   src="assets/images/course/course-01.jpg"
-                  alt="Course Meta"
-                />
+                  alt="Course Meta" />
               </a>
               <div class="time-top">
                 <span class="duration"><i class="icon-61"></i>3 Weeks</span>
               </div>
             </div>
             <div class="content">
-              <span class="course-level"
-                >Why own a Digital Trainee Franchise?</span
-              >
+              <span class="course-level">Why own a Digital Trainee Franchise?</span>
               <h5 class="title">
-                <a href="#"
-                  >Digital Trainee’s franchise is a proven business model, which
+                <a href="#">Digital Trainee’s franchise is a proven business
+                  model, which
                   is low-cost and easy to run allowing you to become successful
                   quickly. Look at some of the reasons why you should invest in
-                  a Digital Trainee franchise.</a
-                >
+                  a Digital Trainee franchise.</a>
               </h5>
               <div class="course-rating">
                 <div class="rating">
@@ -538,16 +532,13 @@
           <div class="course-hover-content">
             <div class="content">
               <button class="wishlist-btn"><i class="icon-22"></i></button>
-              <span class="course-level"
-                >Why own a Digital Trainee Franchise?</span
-              >
+              <span class="course-level">Why own a Digital Trainee Franchise?</span>
               <h5 class="title">
-                <a href="course-details.html"
-                  >Digital Trainee’s franchise is a proven business model, which
+                <a href="course-details.html">Digital Trainee’s franchise is a
+                  proven business model, which
                   is low-cost and easy to run allowing you to become successful
                   quickly. Look at some of the reasons why you should invest in
-                  a Digital Trainee franchise.</a
-                >
+                  a Digital Trainee franchise.</a>
               </h5>
               <div class="course-rating">
                 <div class="rating">
@@ -572,9 +563,8 @@
               </ul>
               <a
                 href="course-details.html"
-                class="edu-btn btn-secondary btn-small"
-                >Enrolled <i class="icon-4"></i
-              ></a>
+                class="edu-btn btn-secondary btn-small">Enrolled <i
+                  class="icon-4"></i></a>
             </div>
           </div>
         </div>
@@ -588,8 +578,7 @@
               <a href="course-details.html">
                 <img
                   src="assets/images/course/course-02.jpg"
-                  alt="Course Meta"
-                />
+                  alt="Course Meta" />
               </a>
               <div class="time-top">
                 <span class="duration"><i class="icon-61"></i>8 Weeks</span>
@@ -598,14 +587,13 @@
             <div class="content">
               <span class="course-level">Low Investment</span>
               <h5 class="title">
-                <a href="#"
-                  >Our unique business model will enable you to start your own
+                <a href="#">Our unique business model will enable you to start
+                  your own
                   training institute with low investment with high yield. Since
                   Digital Trainee is established and widely known institute of
                   India, you don’t need heavy marketing and advertisements to
                   convince students about the quality of the training you will
-                  be offering.</a
-                >
+                  be offering.</a>
               </h5>
               <div class="course-rating">
                 <div class="rating">
@@ -632,14 +620,13 @@
               <button class="wishlist-btn"><i class="icon-22"></i></button>
               <span class="course-level">Low Investment</span>
               <h5 class="title">
-                <a href="course-details.html"
-                  >Our unique business model will enable you to start your own
+                <a href="course-details.html">Our unique business model will
+                  enable you to start your own
                   training institute with low investment with high yield. Since
                   Digital Trainee is established and widely known institute of
                   India, you don’t need heavy marketing and advertisements to
                   convince students about the quality of the training you will
-                  be offering.</a
-                >
+                  be offering.</a>
               </h5>
               <div class="course-rating">
                 <div class="rating">
@@ -666,9 +653,8 @@
               </ul>
               <a
                 href="course-details.html"
-                class="edu-btn btn-secondary btn-small"
-                >Enrolled <i class="icon-4"></i
-              ></a>
+                class="edu-btn btn-secondary btn-small">Enrolled <i
+                  class="icon-4"></i></a>
             </div>
           </div>
         </div>
@@ -682,8 +668,7 @@
               <a href="course-details.html">
                 <img
                   src="assets/images/course/course-03.jpg"
-                  alt="Course Meta"
-                />
+                  alt="Course Meta" />
               </a>
               <div class="time-top">
                 <span class="duration"><i class="icon-61"></i>3 Weeks</span>
@@ -692,12 +677,11 @@
             <div class="content">
               <span class="course-level">Proven Business Model</span>
               <h5 class="title">
-                <a href="#"
-                  >Our proven business model enables you to generate revenue and
+                <a href="#">Our proven business model enables you to generate
+                  revenue and
                   make profit from very first day of the inception. With low
                   franchise fee, pay per student model and transparent royalty
-                  fee, you will be able to quickly succeed in the business.</a
-                >
+                  fee, you will be able to quickly succeed in the business.</a>
               </h5>
               <div class="course-rating">
                 <div class="rating">
@@ -724,12 +708,11 @@
               <button class="wishlist-btn"><i class="icon-22"></i></button>
               <span class="course-level">Proven Business Model</span>
               <h5 class="title">
-                <a href="course-details.html"
-                  >Our proven business model enables you to generate revenue and
+                <a href="course-details.html">Our proven business model enables
+                  you to generate revenue and
                   make profit from very first day of the inception. With low
                   franchise fee, pay per student model and transparent royalty
-                  fee, you will be able to quickly succeed in the business.</a
-                >
+                  fee, you will be able to quickly succeed in the business.</a>
               </h5>
               <div class="course-rating">
                 <div class="rating">
@@ -754,9 +737,8 @@
               </ul>
               <a
                 href="course-details.html"
-                class="edu-btn btn-secondary btn-small"
-                >Enrolled <i class="icon-4"></i
-              ></a>
+                class="edu-btn btn-secondary btn-small">Enrolled <i
+                  class="icon-4"></i></a>
             </div>
           </div>
         </div>
@@ -773,8 +755,7 @@
               <a href="course-details.html">
                 <img
                   src="assets/images/course/course-01.jpg"
-                  alt="Course Meta"
-                />
+                  alt="Course Meta" />
               </a>
               <div class="time-top">
                 <span class="duration"><i class="icon-61"></i>3 Weeks</span>
@@ -783,14 +764,12 @@
             <div class="content">
               <span class="course-level">Growing Industry</span>
               <h5 class="title">
-                <a href="#"
-                  >Digital marketing Industry is growing rapidly at an
+                <a href="#">Digital marketing Industry is growing rapidly at an
                   incredible pace. With companies and brands embracing it like
                   never before, there is no stopping to it. India is the
                   second-largest internet user base in the world. Since there is
                   lot of talent gap in digital marketing industry, many
-                  companies</a
-                >
+                  companies</a>
               </h5>
               <div class="course-rating">
                 <div class="rating">
@@ -817,14 +796,13 @@
               <button class="wishlist-btn"><i class="icon-22"></i></button>
               <span class="course-level">Growing Industry</span>
               <h5 class="title">
-                <a href="course-details.html"
-                  >Digital marketing Industry is growing rapidly at an
+                <a href="course-details.html">Digital marketing Industry is
+                  growing rapidly at an
                   incredible pace. With companies and brands embracing it like
                   never before, there is no stopping to it. India is the
                   second-largest internet user base in the world. Since there is
                   lot of talent gap in digital marketing industry, many
-                  companies</a
-                >
+                  companies</a>
               </h5>
               <div class="course-rating">
                 <div class="rating">
@@ -850,9 +828,8 @@
               </ul>
               <a
                 href="course-details.html"
-                class="edu-btn btn-secondary btn-small"
-                >Enrolled <i class="icon-4"></i
-              ></a>
+                class="edu-btn btn-secondary btn-small">Enrolled <i
+                  class="icon-4"></i></a>
             </div>
           </div>
         </div>
@@ -866,8 +843,7 @@
               <a href="course-details.html">
                 <img
                   src="assets/images/course/course-02.jpg"
-                  alt="Course Meta"
-                />
+                  alt="Course Meta" />
               </a>
               <div class="time-top">
                 <span class="duration"><i class="icon-61"></i>8 Weeks</span>
@@ -876,13 +852,12 @@
             <div class="content">
               <span class="course-level">Comprehensive Support</span>
               <h5 class="title">
-                <a href="#"
-                  >Whether you are a first-time franchise business owner or a
+                <a href="#">Whether you are a first-time franchise business
+                  owner or a
                   seasoned entrepreneur, Digital Trainee’s team will help you in
                   starting your own business. We will provide initial training
                   at Digital Trainee’s head office on everything from business
-                  operations, sales and marketing,</a
-                >
+                  operations, sales and marketing,</a>
               </h5>
               <div class="course-rating">
                 <div class="rating">
@@ -909,13 +884,12 @@
               <button class="wishlist-btn"><i class="icon-22"></i></button>
               <span class="course-level">Comprehensive Support</span>
               <h5 class="title">
-                <a href="course-details.html"
-                  >Whether you are a first-time franchise business owner or a
+                <a href="course-details.html">Whether you are a first-time
+                  franchise business owner or a
                   seasoned entrepreneur, Digital Trainee’s team will help you in
                   starting your own business. We will provide initial training
                   at Digital Trainee’s head office on everything from business
-                  operations, sales and marketing,</a
-                >
+                  operations, sales and marketing,</a>
               </h5>
               <div class="course-rating">
                 <div class="rating">
@@ -941,9 +915,8 @@
               </ul>
               <a
                 href="course-details.html"
-                class="edu-btn btn-secondary btn-small"
-                >Enrolled <i class="icon-4"></i
-              ></a>
+                class="edu-btn btn-secondary btn-small">Enrolled <i
+                  class="icon-4"></i></a>
             </div>
           </div>
         </div>
@@ -956,7 +929,6 @@
   </div>
 </div>
 <!-- End Course Area -->
-
 
 <!--=====================================-->
 <!--=      Call TO Action Area Start    =-->
@@ -982,15 +954,13 @@
           <img
             data-depth="2.5"
             src="https://edublink.html.devsblink.com/assets/images/cta/shape-38.png"
-            alt="shape"
-          />
+            alt="shape" />
         </li>
         <li class="shape-02 scene">
           <img
             data-depth="-2.5"
             src="https://edublink.html.devsblink.com/assets/images/cta/shape-42.png"
-            alt="shape"
-          />
+            alt="shape" />
         </li>
       </ul>
     </div>
@@ -1022,8 +992,7 @@
                   title="YouTube video player"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen
-                ></iframe>
+                  allowfullscreen></iframe>
               </a>
             </div>
             <div class="content">
@@ -1048,8 +1017,7 @@
                   title="YouTube video player"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen
-                ></iframe>
+                  allowfullscreen></iframe>
               </a>
             </div>
             <div class="content">
@@ -1074,8 +1042,7 @@
                   title="YouTube video player"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen
-                ></iframe>
+                  allowfullscreen></iframe>
               </a>
             </div>
             <div class="content">
@@ -1094,8 +1061,7 @@
       <img
         data-depth="-1.4"
         src="https://edublink.html.devsblink.com/assets/images/about/shape-02.png"
-        alt="Shape"
-      />
+        alt="Shape" />
     </li>
     <li class="shape-2 scene">
       <span data-depth="2.5"></span>
@@ -1104,8 +1070,7 @@
       <img
         data-depth="-2.3"
         src="https://edublink.html.devsblink.com/assets/images/counterup/shape-05.png"
-        alt="Shape"
-      />
+        alt="Shape" />
     </li>
   </ul>
 </div>
@@ -1166,50 +1131,42 @@
           <div class="brand-grid">
             <img
               src="https://edublink.html.devsblink.com/assets/images/brand/brand-01.png"
-              alt="Brand Logo"
-            />
+              alt="Brand Logo" />
           </div>
           <div class="brand-grid">
             <img
               src="https://edublink.html.devsblink.com/assets/images/brand/brand-02.png"
-              alt="Brand Logo"
-            />
+              alt="Brand Logo" />
           </div>
           <div class="brand-grid">
             <img
               src="https://edublink.html.devsblink.com/assets/images/brand/brand-03.png"
-              alt="Brand Logo"
-            />
+              alt="Brand Logo" />
           </div>
           <div class="brand-grid">
             <img
               src="https://edublink.html.devsblink.com/assets/images/brand/brand-04.png"
-              alt="Brand Logo"
-            />
+              alt="Brand Logo" />
           </div>
           <div class="brand-grid">
             <img
               src="https://edublink.html.devsblink.com/assets/images/brand/brand-05.png"
-              alt="Brand Logo"
-            />
+              alt="Brand Logo" />
           </div>
           <div class="brand-grid">
             <img
               src="https://edublink.html.devsblink.com/assets/images/brand/brand-06.png"
-              alt="Brand Logo"
-            />
+              alt="Brand Logo" />
           </div>
           <div class="brand-grid">
             <img
               src="https://edublink.html.devsblink.com/assets/images/brand/brand-07.png"
-              alt="Brand Logo"
-            />
+              alt="Brand Logo" />
           </div>
           <div class="brand-grid">
             <img
               src="https://edublink.html.devsblink.com/assets/images/brand/brand-08.png"
-              alt="Brand Logo"
-            />
+              alt="Brand Logo" />
           </div>
         </div>
       </div>

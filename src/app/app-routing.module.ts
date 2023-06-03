@@ -35,6 +35,10 @@ import { NagpurComponent } from './components/branches/nagpur/nagpur.component';
 import { AndheriEastMumbaiComponent } from './components/branches/andheri-east-mumbai/andheri-east-mumbai.component';
 import { TestingComponent } from './components/testing/testing.component';
 import { FormComponent } from './components/form/form.component';
+import { JobDetailsComponent } from './components/career/job-details/job-details.component';
+import { JobDetailsOneComponent } from './components/career/job-details/job-details/job-details-one/job-details-one.component';
+import { JobDetailsTwoComponent } from './components/career/job-details/job-details/job-details-two/job-details-two.component';
+import { CareerApplicationSubmitComponent } from './components/career/career-application-submit/career-application-submit.component';
 
 
 const routes: Routes = [
@@ -72,7 +76,11 @@ const routes: Routes = [
   {path:'branch-10',component:AhmedabadComponent},
   {path:'branch-11',component:NagpurComponent},
   {path:'testing',component:TestingComponent},
-  {path:'form',component:FormComponent}
+  {path:'form',component:FormComponent},//interview
+  {path:'job-details',component:JobDetailsComponent},
+  {path:'job-details-one',component:JobDetailsOneComponent},
+  {path:'job-details-two',component:JobDetailsTwoComponent},
+  {path:'career-application-submit',component:CareerApplicationSubmitComponent}
 ];
 
 @NgModule({

@@ -2,10 +2,10 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 // added for validations
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {MatButtonModule} from '@angular/material/button';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatIconModule} from '@angular/material/icon';
-import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatInputModule} from '@angular/material/input';
+import {MatSelectModule} from '@angular/material/select';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -46,14 +46,19 @@ import { FooterComponent } from './components/footer/footer.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormComponent } from './components/form/form.component';
+import { TestingComponent } from './components/testing/testing.component';
+import { JobDetailsComponent } from './components/career/job-details/job-details.component';
+import { CareerApplicationSubmitComponent } from './components/career/career-application-submit/career-application-submit.component';
+import { JobDetailsOneComponent } from './components/career/job-details/job-details/job-details-one/job-details-one.component';
+import { JobDetailsTwoComponent } from './components/career/job-details/job-details/job-details-two/job-details-two.component';
 
 
 
 const Ux_Modules=[
-  MatButtonModule,
-  MatSidenavModule,
-  MatIconModule,
-  MatToolbarModule
+  MatCheckboxModule,
+  MatFormFieldModule,
+  MatSelectModule,
+  MatInputModule,
 ]
 
 
@@ -95,7 +100,12 @@ const Ux_Modules=[
     SharebtnComponent,
     FooterComponent,
     NavbarComponent,
-    FormComponent
+    FormComponent,
+    TestingComponent,
+    JobDetailsComponent,
+    CareerApplicationSubmitComponent,
+    JobDetailsOneComponent,
+    JobDetailsTwoComponent
   ],
   imports: [
     BrowserModule,
