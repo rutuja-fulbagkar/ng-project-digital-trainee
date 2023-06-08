@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+
 // added for validations
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
@@ -51,6 +52,8 @@ import { JobDetailsComponent } from './components/career/job-details/job-details
 import { CareerApplicationSubmitComponent } from './components/career/career-application-submit/career-application-submit.component';
 import { JobDetailsOneComponent } from './components/career/job-details/job-details/job-details-one/job-details-one.component';
 import { JobDetailsTwoComponent } from './components/career/job-details/job-details/job-details-two/job-details-two.component';
+import { PopupComponent } from './components/sharebtn/popup/popup.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -105,7 +108,8 @@ const Ux_Modules=[
     JobDetailsComponent,
     CareerApplicationSubmitComponent,
     JobDetailsOneComponent,
-    JobDetailsTwoComponent
+    JobDetailsTwoComponent,
+    PopupComponent
   ],
   imports: [
     BrowserModule,
@@ -113,6 +117,7 @@ const Ux_Modules=[
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
     Ux_Modules
     
   ],

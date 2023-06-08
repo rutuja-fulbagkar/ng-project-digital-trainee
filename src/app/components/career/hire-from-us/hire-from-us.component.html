@@ -1,66 +1,60 @@
 <section class="edu-section-gap contact-form-area">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-8">
-          <div class="contact-form">
-            <div class="section-title section-center">
-              <h3 class="title">Hire From Us</h3>
-              <h1>Fill The Form & Get Hire Digital Marketer From Us</h1>
-            </div>
-            <form
-              class="rnt-contact-form rwt-dynamic-form"
-              [formGroup]="form"
-              (ngSubmit)="submit()"
-            >
-              <div class="row row--10">
-                <div class="form-group col-lg-6">
-                  <label for="name">Name</label>
-                  <input
-                    type="text"
-                    name="name"
-                    formControlName="name"
-                    id="name"
-                    placeholder="Enter Your Name"
-                    class="form-control"
-                  />
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="contact-form">
+          <div class="section-title section-center">
+            <h3 class="title">Hire From Us</h3>
+            <h1>Get Hire Digital Marketer From Us</h1>
+          </div>
+          <form
+            class="rnt-contact-form rwt-dynamic-form"
+            [formGroup]="form"
+            (ngSubmit)="submit()">
+            <div class="row row--10">
+              <div class="form-group col-lg-6">
+                <label for="orgname">*Name of Organisation:</label>
+                <input
+                  type="text"
+                  name="orgname"
+                  formControlName="orgname"
+                  id="orgname"
+                  placeholder="Enter Your Organisation Name"
+                  class="form-control" />
+                <div
+                  *ngIf="f['orgname'].touched && f['orgname'].invalid"
+                  class="alert alert-danger">
                   <div
-                    *ngIf="f['name'].touched && f['name'].invalid"
-                    class="alert alert-danger"
-                  >
-                    <div *ngIf="f['name'].errors && f['name'].errors['required']">
-                      Name is required.
-                    </div>
-                    <div
-                      *ngIf="f['name'].errors && f['name'].errors['minlength']"
-                    >
-                      Name should be 3 character.
-                    </div>
+                    *ngIf="f['orgname'].errors && f['orgname'].errors['required']">
+                    Organisation Name is required.
+                  </div>
+                  <div
+                    *ngIf="f['orgname'].errors && f['orgname'].errors['minlength']">
+                    Organisation Name should be character.
                   </div>
                 </div>
-                <div class="form-group col-lg-6">
-                  <label for="email">Email</label>
-                  <input
-                    formControlName="email"
-                    type="email"
-                    name="email"
-                    id="email"
-                    placeholder="Your Email"
-                  />
+              </div>
+              <div class="form-group col-lg-6">
+                <label for="email">*Email ID</label>
+                <input
+                  formControlName="email"
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Enter Your Email ID" />
+                <div
+                  *ngIf="f['email'].touched && f['email'].invalid"
+                  class="alert alert-danger">
                   <div
-                    *ngIf="f['email'].touched && f['email'].invalid"
-                    class="alert alert-danger"
-                  >
-                    <div
-                      *ngIf="f['email'].errors && f['email'].errors['required']"
-                    >
-                      Email is required.
-                    </div>
-                    <div *ngIf="f['email'].errors && f['email'].errors['email']">
-                      Please, enter valid email address.
-                    </div>
+                    *ngIf="f['email'].errors && f['email'].errors['required']">
+                    Email is required.
+                  </div>
+                  <div *ngIf="f['email'].errors && f['email'].errors['email']">
+                    Please, enter valid email address.
                   </div>
                 </div>
-                <div class="form-group">
+              </div>
+              <!-- <div class="form-group">
                   <label for="body">Body</label>
                   <textarea
                     formControlName="body"
@@ -77,95 +71,242 @@
                       Body is required.
                     </div>
                   </div>
-                </div>
-                <!-- <div class="form-group col-12">
-                    <input
-                      type="tel"
-                      name="contact-phone"
-                      id="contact-phone"
-                      placeholder="Phone"
-                    />
+                </div> -->
+              <div class="form-group col-12">
+                <label for="name">*Your contact number:</label>
+                <input
+                  type="tel"
+                  name="mob"
+                  id="mob"
+                  placeholder="Enter Your Phone Number"
+                  formControlName="mob" />
+                <div
+                  *ngIf="f['mob'].touched && f['mob'].invalid"
+                  class="alert alert-danger">
+                  <div *ngIf="f['mob'].errors?.['required']">
+                    Please enter mobile number
                   </div>
-                  <div class="form-group col-lg-6">
-                    <select
-                      class="form-select"
-                      aria-label="Default
-                                        select example"
-                    >
-                      <option selected>Select Your City Name</option>
-                      <option value="1">Delhi</option>
-                      <option value="2">Surat</option>
-                      <option value="3">Ahmedabad</option>
-                      <option value="3">Bhopal</option>
-                      <option value="3">Jaipur</option>
-                      <option value="3">Chennai</option>
-                      <option value="3">Srinagar</option>
-                      <option value="3">Indore</option>
-                      <option value="3">Mumbai</option>
-                    </select>
+                  <div *ngIf="f['mob'].errors?.['pattern']">
+                    Mobile number is not 10 digit
                   </div>
-                  <div class="form-group col-lg-6">
-                    <select
-                      class="form-select"
-                      aria-label="Default
-                                        select example"
-                    >
-                      <option selected>Do You Have Own Your Place</option>
-                      <option value="1">No</option>
-                      <option value="2">Yes</option>
-                    </select>
-                  </div>
-                  <div class="form-group col-12">
-                    <select
-                      class="form-select"
-                      aria-label="Default
-                                        select example"
-                    >
-                      <option selected>Do You Have Any Other Business</option>
-                      <option value="1">No</option>
-                      <option value="2">Yes</option>
-                    </select>
-                  </div> -->
-                <h3>Note: Franchises is not available for Pune City.</h3>
-                <div class="form-group col-12 text-center">
-                  <button
-                    class="rn-btn edu-btn submit-btn"
-                    [disabled]="form.invalid"
-                    name="submit"
-                    type="submit"
-                  >
-                    OK MAIL ME <i class="icon-4"></i>
-                  </button>
                 </div>
               </div>
-            </form>
-          </div>
+              <div class="form-group col-12">
+                <label for="nameofcompanyrepresentative">*Name of company
+                  representative:</label>
+                <input
+                  type="text"
+                  name="nameofcompanyrepresentative"
+                  id="nameofcompanyrepresentative"
+                  placeholder="*Name of company representative:"
+                  formControlName="nameofcompanyrepresentative" />
+                <div
+                  *ngIf="f['nameofcompanyrepresentative'].touched && f['nameofcompanyrepresentative'].invalid"
+                  class="alert alert-danger">
+                  <div
+                    *ngIf="f['nameofcompanyrepresentative'].errors?.['required']">
+                    *Name of company representative:
+                  </div>
+
+                </div>
+              </div>
+              <div class="form-group col-lg-6">
+                <label for="natureofindustry">*Nature of industry:</label>
+                <input
+                  type="text"
+                  name="natureofindustry"
+                  formControlName="natureofindustry"
+                  id="natureofindustry"
+                  placeholder="Enter Nature of industry:"
+                  class="form-control" />
+                <div
+                  *ngIf="f['natureofindustry'].touched && f['natureofindustry'].invalid"
+                  class="alert alert-danger">
+                  <div
+                    *ngIf="f['natureofindustry'].errors && f['natureofindustry'].errors['required']">
+                    *Nature of industry is required.
+                  </div>
+
+                </div>
+              </div>
+              <div class="form-group col-lg-6">
+                <label for="websiteoforganisation">*Website of organisation:</label>
+                <input
+                  type="text"
+                  name="websiteoforganisation"
+                  formControlName="websiteoforganisation"
+                  id="websiteoforganisation"
+                  placeholder="Enter Website of organisation:*"
+                  class="form-control" />
+                <div
+                  *ngIf="f['websiteoforganisation'].touched && f['websiteoforganisation'].invalid"
+                  class="alert alert-danger">
+                  <div
+                    *ngIf="
+                        f['websiteoforganisation'].errors && f['websiteoforganisation'].errors['required']
+                      ">
+                    Website of organisation is required.
+                  </div>
+
+                </div>
+              </div>
+              <div class="form-group col-lg-6">
+                <label for="relocate">*Stipend / Remuneration:</label>
+                <mat-form-field>
+                  <mat-select
+                    formControlName="relocate"
+                    placeholder="Select expected stipend / remuneration">
+                    <mat-option value selected>Select expected stipend /
+                      remuneration</mat-option>
+                    <mat-option value="No">5,000 - 10,000</mat-option>
+                    <mat-option value="10,000 - 15,000">10,000 - 15,000</mat-option>
+                    <mat-option value="15,000 - 20,000">15,000 - 20,000</mat-option>
+                    <mat-option value="20,000 - 25,000"> 20,000 - 25,000</mat-option>
+                    <mat-option value="25,000+">25,000+</mat-option>
+                  </mat-select>
+                </mat-form-field>
+
+              </div>
+
+              <div class="form-group col-lg-6">
+                <label for="ypeofemployees">*Select Type of employees:</label>
+                <mat-form-field>
+                  <mat-select
+                    formControlName="typeofemployees">
+                    <mat-option value selected>Select type of employees</mat-option>
+                    <mat-option value="Interns">Interns</mat-option>
+                    <mat-option value="Full Time Employee">Full Time Employee</mat-option>
+                    <mat-option value="Full Time Employee">Experienced</mat-option>
+                  </mat-select>
+                </mat-form-field>
+                <div
+                  *ngIf="f['typeofemployees'].touched && f['typeofemployees'].invalid"
+                  class="alert alert-danger">
+                  <div *ngIf="f['typeofemployees'].errors?.['required']">
+                    --Select Valid Option--
+                  </div>
+                </div>
+              </div>
+              <div class="form-group col-lg-6">
+                <label for="Officelocation">*Office location:</label>
+                <input
+                  type="text"
+                  name="Officelocation"
+                  formControlName="Officelocation"
+                  id="Officelocation"
+                  placeholder="Enter Location of office*"
+                  class="form-control" />
+                <div
+                  *ngIf="f['Officelocation'].touched && f['Officelocation'].invalid"
+                  class="alert alert-danger">
+                  <div
+                    *ngIf="f['Officelocation'].errors && f['Officelocation'].errors['required']">
+                    Office location is required.
+                  </div>
+                  <div
+                    *ngIf="f['Officelocation'].errors && f['Officelocation'].errors['minlength']">
+                    Office location in character.
+                  </div>
+                </div>
+              </div>
+              <div class="form-group col-lg-6">
+                <label for="numberofemployeesyouwouldliketohire">*Number of
+                  employees you would like to hire:</label>
+                <input
+                  type="number"
+                  name="numberofemployeesyouwouldliketohire"
+                  formControlName="numberofemployeesyouwouldliketohire"
+                  id="numberofemployeesyouwouldliketohire"
+                  placeholder="Enter no.of employee for hire *
+                    " class="form-control" />
+                <div
+                  *ngIf="f['numberofemployeesyouwouldliketohire'].touched && f['numberofemployeesyouwouldliketohire'].invalid"
+                  class="alert alert-danger">
+                  <div
+                    *ngIf="f['numberofemployeesyouwouldliketohire'].errors && f['numberofemployeesyouwouldliketohire'].errors['required']">
+                    Enter no.of employee for hire
+                    is required.
+                  </div>
+                  <div
+                    *ngIf="f['numberofemployeesyouwouldliketohire'].errors && f['numberofemployeesyouwouldliketohire'].errors['minlength']">
+                    Your no. of employee for hiring should be in number.
+                  </div>
+                </div>
+              </div>
+              <div class="form-group col-lg-6">
+                <label for="resume">*Upload job description:</label>
+                <input
+                  type="file"
+                  id="resume" name="resume"
+                  placeholder="Enter Your resume"
+                  formControlName="resume" />
+
+                <div
+                  *ngIf="f['resume'].touched && f['resume'].invalid"
+                  class="alert alert-danger">
+                  <div *ngIf="f['resume'].errors?.['required']">
+                    Upload job description required
+                  </div>
+
+                </div>
+              </div>
+              <div class="form-group col-lg-6">
+                <label for="jobprofileofapplicant">*Job profile of applicant:</label>
+                <input
+                  type="text"
+                  name="jobprofileofapplicant"
+                  formControlName="jobprofileofapplicant"
+                  id="jobprofileofapplicant"
+                  placeholder="Enter Job profile of applicant *"
+                  class="form-control" />
+                <div
+                  *ngIf="f['jobprofileofapplicant'].touched && f['jobprofileofapplicant'].invalid"
+                  class="alert alert-danger">
+                  <div
+                    *ngIf="f['jobprofileofapplicant'].errors && f['jobprofileofapplicant'].errors['required']">
+                    Job profile of applicant is required.
+                  </div>
+                  <div
+                    *ngIf="f['jobprofileofapplicant'].errors && f['jobprofileofapplicant'].errors['minlength']">
+                    Job profile of applicant should be in character.
+                  </div>
+                </div>
+              </div>
+              <!-- <h3>Note: Franchises is not available for Pune City.</h3> -->
+              <div class="form-group col-12 text-center">
+                <button
+                  class="rn-btn edu-btn submit-btn"
+                  [disabled]="form.invalid"
+                  name="submit"
+                  type="submit">
+                  OK MAIL ME <i class="icon-4"></i>
+                </button>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
     </div>
-    <ul class="shape-group">
-      <li class="shape-1 scene">
-        <img
-          data-depth="-2"
-          src="https://edublink.html.devsblink.com/assets/images/about/shape-15.png"
-          alt="shape"
-        />
-      </li>
-      <li class="shape-2 scene">
-        <img
-          data-depth="2"
-          src="https://edublink.html.devsblink.com/assets/images/cta/shape-04.png"
-          alt="shape"
-        />
-      </li>
-      <li class="shape-3 scene"><span data-depth="1"></span></li>
-      <li class="shape-4 scene">
-        <img
-          data-depth="-2"
-          src="https://edublink.html.devsblink.com/assets/images/about/shape-13.png"
-          alt="shape"
-        />
-      </li>
-    </ul>
-  </section>
-  
+  </div>
+  <ul class="shape-group">
+    <li class="shape-1 scene">
+      <img
+        data-depth="-2"
+        src="https://edublink.html.devsblink.com/assets/images/about/shape-15.png"
+        alt="shape" />
+    </li>
+    <li class="shape-2 scene">
+      <img
+        data-depth="2"
+        src="https://edublink.html.devsblink.com/assets/images/cta/shape-04.png"
+        alt="shape" />
+    </li>
+    <li class="shape-3 scene"><span data-depth="1"></span></li>
+    <li class="shape-4 scene">
+      <img
+        data-depth="-2"
+        src="https://edublink.html.devsblink.com/assets/images/about/shape-13.png"
+        alt="shape" />
+    </li>
+  </ul>
+</section>

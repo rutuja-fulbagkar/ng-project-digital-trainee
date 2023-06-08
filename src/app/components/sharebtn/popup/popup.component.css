@@ -1,0 +1,9 @@
+.modal-header {
+    border: none;
+}
+
+.close {
+    border: none;
+    background-color: transparent;
+    font-size: 40px;
+}

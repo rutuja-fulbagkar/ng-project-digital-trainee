@@ -106,7 +106,8 @@
             <form
               class="rnt-contact-form rwt-dynamic-form"
               [formGroup]="form"
-              (ngSubmit)="submit()">
+              (ngSubmit)="submit();form.reset()"action="/submit-form"
+             >
               <div class="row row--10">
                 <div class="form-group col-12">
                   <input
@@ -189,6 +190,7 @@
                       --Select Course Type--
                     </div>
                   </div>
+                
                   <div [hidden]="isShowDiv">
                     <h6>Select Your Nearest Branch</h6>
                     <mat-form-field>
