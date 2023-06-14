@@ -78,7 +78,7 @@
             <form
               class="rnt-contact-form rwt-dynamic-form"
               [formGroup]="form"
-              (ngSubmit)="submit()">
+              (ngSubmit)="submit();form.reset()" action="/submit-form">
               <div class="row row--10">
                 <div class="form-group col-lg-6">
                   <label for="name">*Full name:</label>

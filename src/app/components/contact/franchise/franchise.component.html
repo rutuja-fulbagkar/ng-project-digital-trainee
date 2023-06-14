@@ -78,7 +78,7 @@
           <form
             class="rnt-contact-form rwt-dynamic-form"
             [formGroup]="form"
-            (ngSubmit)="submit()">
+            (ngSubmit)="submit();form.reset()" action="/submit-form">
             <div class="row row--10">
               <div class="form-group col-lg-6">
                 <label for="name">Name</label>
@@ -200,7 +200,7 @@
               <div class="form-group" [hidden]="isShowDiv">
 
                 <textarea
-                  formControlName="describe"
+                  formControlName="description"
                   id="body"
                   type="text"
                   class="form-control"
@@ -208,9 +208,9 @@
                 </textarea>
                 <div
                 
-                  *ngIf="f['describe'].touched && f['describe'].invalid"
+                  *ngIf="f['description'].touched && f['description'].invalid"
                   class="alert alert-danger">
-                  <div *ngIf="f['describe'].errors && f['describe'].errors['required']">
+                  <div *ngIf="f['description'].errors && f['description'].errors['required']">
                     Describe Your Business
 
                   </div>

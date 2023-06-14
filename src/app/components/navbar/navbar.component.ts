@@ -15,5 +15,21 @@ export class NavbarComponent {
   toggleDisplayDiv() {  
     this.isShowDiv = !this.isShowDiv;  
   }  
+// added
+
+  openNav() {
+    this.isShowDiv = !this.isShowDiv;  
+    const sidenav = document.getElementById('mySidenav');
+    if (sidenav) {
+      sidenav.style.width = '250px';
+    }
+  }
+
+  closeNav() {
+    const sidenav = document.getElementById('mySidenav');
+    if (sidenav) {
+      sidenav.style.width = '0';
+    }
+  }
   
 }

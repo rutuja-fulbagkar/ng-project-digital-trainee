@@ -20,5 +20,9 @@ app.use(urlencoded({ extended: true }));
 app.use(cors({ credentials: true, origin: "http://localhost:4200" }));
 
 app.use("/contact", require("./router/contact"));
+app.use("/franchise", require("./router/franchise"));
+app.use("/careerapplications",require("./router/careerapplications"));
+app.use("/hirefromus",require("./router/hirefromus"));
+
 
 app.listen(port, () => console.log("server start"));

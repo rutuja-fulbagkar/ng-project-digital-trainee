@@ -3,10 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 
 // added for validations
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {MatInputModule} from '@angular/material/input';
-import {MatSelectModule} from '@angular/material/select';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatCheckboxModule} from '@angular/material/checkbox';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+// side-nav
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+import { MatButtonModule } from '@angular/material/button';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -54,16 +60,22 @@ import { JobDetailsOneComponent } from './components/career/job-details/job-deta
 import { JobDetailsTwoComponent } from './components/career/job-details/job-details/job-details-two/job-details-two.component';
 import { PopupComponent } from './components/sharebtn/popup/popup.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ThankYouComponent } from './components/thank-you/thank-you.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
-
-
-const Ux_Modules=[
+const Ux_Modules = [
   MatCheckboxModule,
   MatFormFieldModule,
   MatSelectModule,
   MatInputModule,
-]
 
+  MatToolbarModule,
+  MatSidenavModule,
+  MatIconModule,
+  MatListModule,
+  MatListModule,
+  MatButtonModule,
+];
 
 @NgModule({
   declarations: [
@@ -109,7 +121,9 @@ const Ux_Modules=[
     CareerApplicationSubmitComponent,
     JobDetailsOneComponent,
     JobDetailsTwoComponent,
-    PopupComponent
+    PopupComponent,
+    ThankYouComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
@@ -118,10 +132,9 @@ const Ux_Modules=[
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    Ux_Modules
-    
+    Ux_Modules,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

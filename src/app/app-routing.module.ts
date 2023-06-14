@@ -39,6 +39,8 @@ import { JobDetailsComponent } from './components/career/job-details/job-details
 import { JobDetailsOneComponent } from './components/career/job-details/job-details/job-details-one/job-details-one.component';
 import { JobDetailsTwoComponent } from './components/career/job-details/job-details/job-details-two/job-details-two.component';
 import { CareerApplicationSubmitComponent } from './components/career/career-application-submit/career-application-submit.component';
+import { ThankYouComponent } from './components/thank-you/thank-you.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 
 const routes: Routes = [
@@ -80,7 +82,13 @@ const routes: Routes = [
   {path:'job-details',component:JobDetailsComponent},
   {path:'job-details-one',component:JobDetailsOneComponent},
   {path:'job-details-two',component:JobDetailsTwoComponent},
-  {path:'career-application-submit',component:CareerApplicationSubmitComponent}
+  {path:'career-application-submit',component:CareerApplicationSubmitComponent},
+  {path:'thank-you',component:ThankYouComponent}, 
+  
+    //Wild Card Route for 404 request
+    { path: '**', pathMatch: 'full', 
+        component: PageNotFoundComponent },
+  
 ];
 
 @NgModule({

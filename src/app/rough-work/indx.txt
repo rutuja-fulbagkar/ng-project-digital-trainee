@@ -1,0 +1,28 @@
+13-06-2023
+worked on :angular(digital-trainee)
+Making Dynamic form with validations and inserting filled 
+values for form into database.
+for :contact-forms -:
+a.EnquiryComponent-done
+b.FranchiseComponent-done
+career-forms -:
+a.Currentopening-done
+b.HireFromUsComponent-done
+watched videos related to deploying backend (node)-pending
+tried deploying project into istalled angular setup live+deleted 
+slider-Testimonials
+making angular website live as changes are done
+iitians banner -added
+
+14-06-2023
+created thank you page for faq  component
+added content for thank page,
+added social media links.-done
+changed banner image for-iitians-done
+topnav -added linking social media,blicking-buttons
+contact numbers.-done
+watched videos 
+created page not Found component created.
+set up a 404 page in the angular routing ,
+if path is not correct the error page should display-done
+making router link active for components respectively.

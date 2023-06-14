@@ -10,7 +10,7 @@
           <form
             class="rnt-contact-form rwt-dynamic-form"
             [formGroup]="form"
-            (ngSubmit)="submit()">
+            (ngSubmit)="submit();form.reset()" action="/submit-form">
             <div class="row row--10">
               <div class="form-group col-lg-6">
                 <label for="orgname">*Name of Organisation:</label>
@@ -151,10 +151,10 @@
                 </div>
               </div>
               <div class="form-group col-lg-6">
-                <label for="relocate">*Stipend / Remuneration:</label>
+                <label for="stipend">*Stipend / Remuneration:</label>
                 <mat-form-field>
                   <mat-select
-                    formControlName="relocate"
+                    formControlName="stipend"
                     placeholder="Select expected stipend / remuneration">
                     <mat-option value selected>Select expected stipend /
                       remuneration</mat-option>
@@ -188,23 +188,23 @@
                 </div>
               </div>
               <div class="form-group col-lg-6">
-                <label for="Officelocation">*Office location:</label>
+                <label for="officelocation">*Office location:</label>
                 <input
                   type="text"
-                  name="Officelocation"
-                  formControlName="Officelocation"
-                  id="Officelocation"
+                  name="officelocation"
+                  formControlName="officelocation"
+                  id="officelocation"
                   placeholder="Enter Location of office*"
                   class="form-control" />
                 <div
-                  *ngIf="f['Officelocation'].touched && f['Officelocation'].invalid"
+                  *ngIf="f['officelocation'].touched && f['officelocation'].invalid"
                   class="alert alert-danger">
                   <div
-                    *ngIf="f['Officelocation'].errors && f['Officelocation'].errors['required']">
+                    *ngIf="f['officelocation'].errors && f['officelocation'].errors['required']">
                     Office location is required.
                   </div>
                   <div
-                    *ngIf="f['Officelocation'].errors && f['Officelocation'].errors['minlength']">
+                    *ngIf="f['officelocation'].errors && f['officelocation'].errors['minlength']">
                     Office location in character.
                   </div>
                 </div>
